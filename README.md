@@ -27,18 +27,6 @@ render(){
 Then in each component you want to log from, accept the context type: logger
 
 ```javascript
-import ReactLoggly from 'react-loggly';
-...
-render(){
-    return (
-        <ReactLoggly
-            token={this.state.token}
-        >
-         <App>
-        </ReactLoggly>
-    );
-}
-```
 class MyComponent extends React.Component{
   static contextTypes = {
     logger: PropTypes.func,
