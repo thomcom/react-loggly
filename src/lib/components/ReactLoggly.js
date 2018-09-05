@@ -68,7 +68,7 @@ class LogglyLogger extends React.Component {
       this.consoleLog(`Can't log ${type} of message to loggly. Skipping.`);
       return;
     }
-    const message = (type === 'string') ? {text: data} : data;
+    let message = {text: data};
 
     // Add our unique Session ID
     message.sessionId = this.sessionId;
